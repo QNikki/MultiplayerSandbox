@@ -65,7 +65,7 @@ namespace DZM.Core
                 }
             }
         }
-
+        
         private void TryCancelProcess(SystemGroupAuthoring group)
         {
             if (!_groupUpdate.TryGetValue(group, out var cts))

@@ -783,6 +783,88 @@ Transform:
   - {fileID: 321786380}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &875535592
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 875535593}
+  - component: {fileID: 875535594}
+  - component: {fileID: 875535597}
+  m_Layer: 0
+  m_Name: UpdateSystemGroup
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &875535593
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875535592}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.55911, y: 1, z: -2.09331}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &875535594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875535592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Netcode.Runtime::Unity.Netcode.NetworkObject
+  GlobalObjectIdHash: 988175933
+  InScenePlacedSourceGlobalObjectIdHash: 0
+  DeferredDespawnTick: 0
+  Ownership: 1
+  AlwaysReplicateAsRoot: 0
+  SynchronizeTransform: 0
+  ActiveSceneSynchronization: 0
+  SceneMigrationSynchronization: 0
+  SpawnWithObservers: 1
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 0
+  SyncOwnerTransformWhenParented: 0
+  AllowOwnerToParent: 0
+--- !u!114 &875535597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875535592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd30e6ad5cbd488ba2a19446a2d359e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DZM.Core.NetworkSystemGroup
+  ShowTopMostFoldoutHeaderGroup: 1
+  _worldSystem: {fileID: 2116145711}
+  _groupInfos:
+  - _systemGroup: {fileID: 11400000, guid: ea85bc1f895a99548bf945dabdf25e38, type: 2}
+    _condition: {fileID: 11400000, guid: 217e7e073fa5b41469aa8e34592727c5, type: 2}
+    _updateTiming: 8
+  - _systemGroup: {fileID: 11400000, guid: 31ba3cb5fb7fa8b42aa67eb6de815a8a, type: 2}
+    _condition: {fileID: 11400000, guid: a104c3d74054f5c468ceff3a5da9065d, type: 2}
+    _updateTiming: 8
+  - _systemGroup: {fileID: 11400000, guid: f3e29b54693c56644af5c5fb48af7b7f, type: 2}
+    _condition: {fileID: 11400000, guid: a5993976f8d44b14b90156f498c4ccf3, type: 2}
+    _updateTiming: 8
 --- !u!224 &904924960 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8052431284101401614, guid: 0e9d8de300c13eb49a9993267b9c814f, type: 3}
@@ -1675,6 +1757,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+--- !u!1 &2116145710
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2116145712}
+  - component: {fileID: 2116145711}
+  m_Layer: 0
+  m_Name: World
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2116145711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116145710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad9031633a3e438e8d9c579b495076d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DZM.Core.WorldSystem
+  <RandomAuthoring>k__BackingField: {fileID: 11400000, guid: 8b7d5c294cfd13742b7aeb5953bf36af, type: 2}
+--- !u!4 &2116145712
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116145710}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.55911, y: 1, z: -2.09331}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2272065741962515029
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1854,10 +1981,12 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 401530993}
-  - {fileID: 624809059}
   - {fileID: 1530523066}
   - {fileID: 5183126547439151896}
   - {fileID: 176443791}
   - {fileID: 1578588763}
   - {fileID: 859042217}
   - {fileID: 128567238}
+  - {fileID: 624809059}
+  - {fileID: 2116145712}
+  - {fileID: 875535593}

@@ -13,7 +13,7 @@ namespace DZM.Core
 
         public IReadOnlyList<TMember> ROMembers => Members;
         
-        public  void MarkForAddition(TMember member)
+        public virtual void MarkForAddition(TMember member)
         {
             if (member == null)
             {
@@ -28,7 +28,7 @@ namespace DZM.Core
             ToRemove.Remove(member);
         }
         
-        public  void MarkForRemoval(TMember member)
+        public virtual void MarkForRemoval(TMember member)
         {
             if (member == null)
             {

@@ -1,6 +1,6 @@
 ﻿using Unity.Netcode;
 
-namespace DZM.Core
+namespace DZM.Core.Data
 {
     public struct CharacterMoveInput : INetworkSerializable
     {
